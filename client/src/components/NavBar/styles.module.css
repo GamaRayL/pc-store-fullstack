@@ -1,0 +1,14 @@
+.toolBar {
+    justify-content: space-between;
+}
+
+.logo {
+    color: inherit;
+    text-decoration: none;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 16px;
+}
+
