@@ -16,6 +16,17 @@
     overflow: hidden;
 }
 
+.cardMedia {
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.cardActions {
+    margin-top: auto;
+    padding: 0;
+    padding-top: 12px; 
+}
+
 @media screen and (max-width: 620px) {
     .button {
         width: 100%;

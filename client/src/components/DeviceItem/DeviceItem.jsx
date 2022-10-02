@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardActions,
@@ -8,7 +9,7 @@ import {
   ThemeProvider,
   Typography,
 } from "@mui/material";
-import { AddShoppingCart } from "@mui/icons-material";
+import { AddShoppingCart, Star } from "@mui/icons-material";
 import { breakpoints, Price } from "utils/consts";
 import css from "./styles.module.css";
 
@@ -22,9 +23,16 @@ export const DeviceItem = ({ device }) => {
             image={device.img}
             component="img"
             alt="товар"
-            sx={{ objectFit: "contain" }}
+            className={css.cardMedia}
           />
-          <CardContent>
+          <CardContent sx={{ padding: 0 }}>
+            <Box sx={{ mb: 1 }}>
+              <Star sx={{ fontSize: 14 }} color="warning" />
+              <Star sx={{ fontSize: 14 }} color="disabled" />
+              <Star sx={{ fontSize: 14 }} color="disabled" />
+              <Star sx={{ fontSize: 14 }} color="disabled" />
+              <Star sx={{ fontSize: 14 }} color="disabled" />
+            </Box>
             <Typography
               variant="h5"
               className={css.price}
@@ -37,7 +45,7 @@ export const DeviceItem = ({ device }) => {
               {device.name}
             </Typography>
           </CardContent>
-          <CardActions sx={{ mt: "auto" }}>
+          <CardActions className={css.cardActions}>
             <Button
               className={css.button}
               color="primary"
